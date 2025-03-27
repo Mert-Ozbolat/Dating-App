@@ -101,6 +101,9 @@ const ProfileStyle = StyleSheet.create({
     },
 
     personalInfoSection: {
+        backgroundColor: Colors.mediumGray,
+        padding: 20,
+        borderRadius: 30,
         marginTop: 10,
         paddingHorizontal: 25,
         gap: 15,

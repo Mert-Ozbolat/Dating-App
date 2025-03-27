@@ -10,16 +10,14 @@ const MessagesStyle = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 25,
         alignItems: 'center'
-
     },
-    headerTitle: {
+    titles: {
         fontSize: 24,
         fontWeight: '700',
-        color: Colors.darkGray
+        color: Colors.primaryPink,
+        paddingHorizontal: 10,
     },
-    search: {
-        width: '100%',
-    }
+
 });
 
 export default MessagesStyle;
