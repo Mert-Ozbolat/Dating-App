@@ -10,6 +10,13 @@ const defaultScreenStyle = StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.lightGray,
     },
+
+    darkMode: {
+        backgroundColor: Colors.darkGray,
+    },
+    darkText: {
+        color: Colors.lightGray,
+    },
 });
 
 export { defaultScreenStyle };

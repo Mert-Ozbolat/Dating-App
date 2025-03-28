@@ -11,7 +11,7 @@ const Header = () => {
                     <Image source={require('../../assets/users/men1.jpeg')} style={HomeStyle.userImg} />
                 </View>
                 <View style={HomeStyle.welcomeContainer}>
-                    <Text style={HomeStyle.welcome}>Welcome</Text>
+                    <Text style={HomeStyle.welcome}>Welcome🔥</Text>
                     <Text style={HomeStyle.userName}>Oliver Wilson</Text>
                 </View>
             </View>

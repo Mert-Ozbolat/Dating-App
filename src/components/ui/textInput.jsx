@@ -5,8 +5,7 @@ import { Colors } from '../../theme/colors';
 
 const Input = ({ title, color, backgroundColor, ...props }) => {
     return (
-        <View>
-            <Text style={{ fontSize: 16, color: color }}>{title}</Text>
+        <View style={styles.container}>
             <TextInput
                 {...props}
                 style={[styles.input, { color: color, backgroundColor: backgroundColor }]}
@@ -17,12 +16,10 @@ const Input = ({ title, color, backgroundColor, ...props }) => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     input: {
         backgroundColor: Colors.lightGray,
-        width: '80%',
+        width: '100%',
+        height: height * 0.05,
         borderRadius: width * 0.08,
         paddingHorizontal: width * 0.05
 

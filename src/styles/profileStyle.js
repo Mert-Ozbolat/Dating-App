@@ -14,21 +14,44 @@ const ProfileStyle = StyleSheet.create({
         paddingHorizontal: 25,
         alignItems: 'center'
     },
-    profileTitle: {
-        fontSize: 24,
-        fontWeight: '700',
-        color: Colors.darkGray
+
+    // Theme Section
+    theme: {
+        justifyContent: 'center',
+        paddingHorizontal: 20,
+        alignSelf: 'flex-end'
+    },
+    themeBtn: {
+        backgroundColor: Colors.mediumGray,
+        padding: 5,
+        borderRadius: 50,
     },
     themeIcon: {
         width: 30,
         height: 30,
+        resizeMode: 'cover',
+    },
+
+    //* Dark Mode
+    darkMode: {
+        backgroundColor: Colors.darkGray,
+    },
+    darkText: {
+        color: Colors.lightGray,
+    },
+
+
+    profileTitle: {
+        fontSize: 24,
+        fontWeight: '700',
+        color: Colors.darkGray,
     },
 
     // Profile Seciton
     profileSection: {
-        height: 300,
+        height: 350,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
 
     userImgContainer: {
@@ -97,7 +120,7 @@ const ProfileStyle = StyleSheet.create({
 
     // About Section
     aboutSection: {
-        paddingHorizontal: 25
+        paddingHorizontal: 25,
     },
 
     personalInfoSection: {
@@ -105,6 +128,7 @@ const ProfileStyle = StyleSheet.create({
         padding: 20,
         borderRadius: 30,
         marginTop: 10,
+        marginBottom: 150,
         paddingHorizontal: 25,
         gap: 15,
     },

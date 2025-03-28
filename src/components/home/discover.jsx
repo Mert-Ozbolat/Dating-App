@@ -1,21 +1,30 @@
-import { View, Text, TextInput, Image } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native'
+import React from 'react'
 import HomeStyle from '../../styles/homeStyle'
-import Input from '../ui/textInput';
+import Input from '../ui/textInput'
+import { Colors } from '../../theme/colors'
 
 const Discover = () => {
-    const [text, setText] = useState('');
     return (
-        <View style={HomeStyle.discoverSection}>
-            <Text style={HomeStyle.discoverTitle}>Discover</Text>
-            <View style={HomeStyle.searchBarWrapper}>
-                <Input
-                    title={'Search...'}
-                />
-                <View style={HomeStyle.filter}>
-                    <Image source={require('../../assets/icons/filter.png')} style={HomeStyle.filterIcon} />
+        <View style={HomeStyle.discoverWrapper}>
+            <Text style={HomeStyle.title}>Discover</Text>
+
+            <View style={HomeStyle.searchWrapper}>
+                <View style={HomeStyle.searchContainer}>
+                    <View style={HomeStyle.inputWrapper}>
+                        <Input
+                            placeholder="Search.."
+                            color={Colors.darkGray}
+                            backgroundColor={Colors.lightGray}
+                        />
+                    </View>
                 </View>
+                <TouchableOpacity style={HomeStyle.filterIcon}>
+                    <Image source={require('../../assets/icons/filter.png')} style={HomeStyle.icon} />
+                </TouchableOpacity>
             </View>
+
+
         </View>
     )
 }

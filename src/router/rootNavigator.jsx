@@ -4,6 +4,7 @@ import TabNavigatior from "./tabNavigatior";
 import HomeScreen from "../screens/home";
 import MessagesScreen from "../screens/messages";
 import ProfileScreen from "../screens/profile";
+import Detail from "../screens/detail";
 
 
 const RootNavigator = () => {
@@ -18,6 +19,7 @@ const RootNavigator = () => {
         >
             <Stack.Screen name={TABNAVIGATION.TABNAVIGATOR} component={TabNavigatior} />
             <Stack.Screen name={TABNAVIGATION.HOME} component={HomeScreen} />
+            <Stack.Screen name={TABNAVIGATION.DETAIL} component={Detail} />
             <Stack.Screen name={TABNAVIGATION.MESSAGES} component={MessagesScreen} />
             <Stack.Screen name={TABNAVIGATION.PROFILE} component={ProfileScreen} />
         </Stack.Navigator>

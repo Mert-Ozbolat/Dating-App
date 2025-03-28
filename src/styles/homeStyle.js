@@ -5,7 +5,6 @@ import { height, width } from '../utils/constants';
 const HomeStyle = StyleSheet.create({
     // HEADER
     headerContainer: {
-        alignItems: 'center',
         width: '100%',
         backgroundColor: Colors.primaryPink,
         flex: 0.6,
@@ -20,12 +19,14 @@ const HomeStyle = StyleSheet.create({
         backgroundColor: Colors.lightGray,
         marginTop: height * 0.01,
         borderRadius: width * 0.05,
+        justifyContent: 'center',
+        alignSelf: 'center',
     },
     user: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        padding: width * 0.03,
+        paddingHorizontal: width * 0.03
     },
     userProfile: {
         flexDirection: 'row',
@@ -55,53 +56,48 @@ const HomeStyle = StyleSheet.create({
     },
 
     // DISCOVER
-    discoverSection: {
-        height: 120,
-        marginTop: height * 0.03,
-    },
-    discoverTitle: {
+    title: {
+        fontSize: 24,
+        fontWeight: 'semibold',
         color: Colors.lightGray,
-        fontSize: width * 0.06,
-        fontWeight: '500',
+        padding: 20
     },
-    searchBarWrapper: {
+    searchWrapper: {
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginTop: height * 0.02,
-    },
-    searchInput: {
-        backgroundColor: Colors.lightGray,
-        width: '85%',
-        borderRadius: width * 0.08,
-        padding: width * 0.03,
-    },
-    filter: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Colors.lightGray,
-        borderRadius: width * 0.1,
-        padding: width * 0.02,
+        gap: 8,
+    },
+    searchContainer: {
+        width: '80%',
     },
     filterIcon: {
-        width: width * 0.08,
-        height: width * 0.08,
-        padding: width * 0.05,
+        width: 40,
+        height: 40,
+        backgroundColor: Colors.lightGray,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 50
+    },
+    icon: {
+        width: 30,
+        height: 30,
     },
 
     // CARD
     cardContainer: {
+        marginTop: -20,
         width: width * 0.85,
-        height: height * 0.50,
-        backgroundColor: Colors.lightGray, // Arka planı belirgin hale getirmek için
+        height: height * 0.52,
+        backgroundColor: Colors.lightGray,
         borderRadius: width * 0.08,
-        overflow: 'hidden',  // Taşan içeriği kesmek için
-        alignSelf: 'center', // Ortalamak için
+        overflow: 'hidden',
+        alignSelf: 'center'
     },
     imageWrapper: {
         width: '100%',
         height: '100%',
-        position: 'absolute', // Kartın içinde durmasını sağlar
+        position: 'absolute',
     },
     matchImage: {
         flex: 1,
@@ -111,13 +107,11 @@ const HomeStyle = StyleSheet.create({
         resizeMode: 'cover',
     },
     cardBottom: {
-        height: height * 0.12,
+        height: height * 0.14,
         width: '100%',
         backgroundColor: Colors.darkGray,
         position: 'absolute',
         bottom: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
         opacity: 0.9,
         borderBottomRightRadius: width * 0.08,
         borderBottomLeftRadius: width * 0.08,
@@ -125,8 +119,8 @@ const HomeStyle = StyleSheet.create({
     },
     infoContainer: {
         flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        height: '100%',
     },
     nameContainer: {
         flexDirection: 'row',
@@ -136,8 +130,13 @@ const HomeStyle = StyleSheet.create({
     },
     nameText: {
         fontSize: width * 0.06,
-        color: '#fff',
-        fontWeight: 'bold',
+        color: Colors.lightGray,
+        fontWeight: 'medium',
+    },
+    locationText: {
+        fontSize: width * 0.03,
+        color: Colors.lightGray,
+        fontWeight: 'medium',
     },
     ageWrapper: {
         width: width * 0.08,
@@ -152,6 +151,64 @@ const HomeStyle = StyleSheet.create({
         color: Colors.primaryYellow,
         fontWeight: 'bold',
     },
+
+
+    // Buttons
+    actionsContainer: {
+        flexDirection: 'row',
+        width: '100%',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+
+    cancel: {
+        width: 40,
+        height: 40,
+        borderRadius: 25,
+        backgroundColor: Colors.lightGray,
+        justifyContent: 'center',
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowOffset: { width: 0, height: 2 },
+        elevation: 5,
+    },
+
+    match: {
+        width: 60,
+        height: 60,
+        borderRadius: 30,
+        backgroundColor: Colors.lightGray,
+        justifyContent: 'center',
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowOffset: { width: 0, height: 2 },
+        elevation: 5,
+    },
+
+    star: {
+        width: 40,
+        height: 40,
+        borderRadius: 25,
+        backgroundColor: Colors.lightGray,
+        justifyContent: 'center',
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowOffset: { width: 0, height: 2 },
+        elevation: 5,
+    },
+    matchIcon: {
+        width: 40,
+        height: 40,
+        resizeMode: 'contain',
+    },
+    icon: {
+        width: 30,
+        height: 30,
+        resizeMode: 'contain',
+    }
 });
 
 export default HomeStyle;

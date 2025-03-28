@@ -6,6 +6,8 @@ import HomeStyle from '../../styles/homeStyle'
 import Header from '../../components/home/header'
 import Card from '../../components/home/card'
 import Discover from '../../components/home/discover'
+import Input from '../../components/ui/textInput'
+import { Colors } from '../../theme/colors'
 
 const HomeScreen = () => {
     return (
@@ -15,14 +17,15 @@ const HomeScreen = () => {
                     <Header />
                 </View>
 
+
                 <View>
                     <Discover />
                 </View>
 
-                <View style={{ backgroundColor: 'blue', }}>
+
+                <View>
                     <Card />
                 </View>
-
             </View>
 
         </SafeAreaView>

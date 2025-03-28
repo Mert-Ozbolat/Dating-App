@@ -1,6 +1,7 @@
 export const TABNAVIGATION = {
     TABNAVIGATOR: 'TABNAVIGATOR',
-    HOME: "HomeScreen",
-    MESSAGES: "MessagesScreen",
-    PROFILE: "ProfileScreen",
+    HOME: "Home",
+    DETAIL: "Detail",
+    MESSAGES: "Messages",
+    PROFILE: "Profile",
 };
