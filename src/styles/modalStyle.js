@@ -48,12 +48,12 @@ const ModalStyle = StyleSheet.create({
         backgroundColor: Colors.primaryPink,
     },
     genderText: {
-        color: "black",
-        fontWeight: "600",
+        color: Colors.darkGray,
+        fontWeight: "semibold",
         fontSize: width * 0.045,
     },
     selectedGenderText: {
-        color: "white",
+        color: Colors.lightGray,
     },
     sliderSection: {
         width: "100%",

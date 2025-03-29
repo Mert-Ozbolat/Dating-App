@@ -110,6 +110,9 @@ const DetailStyle = StyleSheet.create({
     },
     hobbiesTitle: {
         textAlign: 'center',
+        fontSize: 18,
+        fontWeight: 'medium',
+        padding: 5
     },
     hobbiesGrid: {
         flexDirection: 'row',

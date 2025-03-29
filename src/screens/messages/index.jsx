@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView, FlatList, TextInput, Image } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, FlatList } from 'react-native'
 import React from 'react'
 import MessagesStyle from '../../styles/messagesStyle'
 import { defaultScreenStyle } from '../../styles/defaultScreenStyle'
@@ -44,7 +44,7 @@ const users = [
 
 const MessagesScreen = () => {
 
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
 
     return (
         <SafeAreaView style={[defaultScreenStyle.container, theme === 'dark' && defaultScreenStyle.darkMode]}>

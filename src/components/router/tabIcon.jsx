@@ -1,19 +1,21 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, Dimensions } from 'react-native';
 import { TABNAVIGATION } from '../../utils/routes';
-import { height, width } from '../../utils/constants';
+import { width } from '../../utils/constants';
 
 
-const TabIcon = ({ route, size, color, focused }) => {
 
+const TabIcon = ({ route }) => {
+
+    const iconSize = width * 0.07;
 
     switch (route.name) {
         case TABNAVIGATION.HOME:
-            return <Image source={require('../../assets/icons/cart.png')} style={{ width: 30, height: 30, resizeMode: 'contain' }} />
+            return <Image source={require('../../assets/icons/cart.png')} style={{ width: iconSize, height: iconSize, resizeMode: 'contain' }} />;
         case TABNAVIGATION.MESSAGES:
-            return <Image source={require('../../assets/icons/message.png')} style={{ width: 30, height: 30, resizeMode: 'contain' }} />
+            return <Image source={require('../../assets/icons/message.png')} style={{ width: iconSize, height: iconSize, resizeMode: 'contain' }} />;
         case TABNAVIGATION.PROFILE:
-            return <Image source={require('../../assets/icons/person.png')} style={{ width: 30, height: 30, resizeMode: 'contain' }} />
+            return <Image source={require('../../assets/icons/person.png')} style={{ width: iconSize, height: iconSize, resizeMode: 'contain' }} />;
     }
 };
 

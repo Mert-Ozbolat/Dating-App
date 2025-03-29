@@ -1,7 +1,6 @@
-import { View, Text, Image, TextInput } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, Image } from 'react-native'
+import React from 'react'
 import HomeStyle from '../../styles/homeStyle'
-import Card from './card';
 
 const Header = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import MessagesStyle from '../../styles/messagesStyle';
 import { useTheme } from '../../context/themeContext';
 import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
@@ -7,7 +7,7 @@ import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
 
 const ActiveUsers = ({ item }) => {
 
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
 
     return (
         <View style={MessagesStyle.section}>

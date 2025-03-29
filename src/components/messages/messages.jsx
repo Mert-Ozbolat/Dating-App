@@ -5,7 +5,7 @@ import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
 import { useTheme } from '../../context/themeContext';
 
 const Messages = ({ item }) => {
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
     return (
         <View style={MessagesStyle.messages}>
             <View style={MessagesStyle.messageContainer}>

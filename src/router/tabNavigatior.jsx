@@ -32,6 +32,7 @@ const TabNavigatior = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    marginHorizontal: width * 0.05,
                 },
                 tabBarItemStyle: {
                     height: '100%',
