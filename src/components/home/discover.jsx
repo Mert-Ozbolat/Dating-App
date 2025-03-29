@@ -1,10 +1,13 @@
-import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
-import HomeStyle from '../../styles/homeStyle'
-import Input from '../ui/textInput'
-import { Colors } from '../../theme/colors'
+import { View, Text, TouchableOpacity, Image } from 'react-native';
+import React, { useState } from 'react';
+import HomeStyle from '../../styles/homeStyle';
+import Input from '../ui/textInput';
+import { Colors } from '../../theme/colors';
+import FilterModal from '../modal/filterModal';
 
 const Discover = () => {
+    const [isModalVisible, setModalVisible] = useState(false);
+
     return (
         <View style={HomeStyle.discoverWrapper}>
             <Text style={HomeStyle.title}>Discover</Text>
@@ -19,14 +22,20 @@ const Discover = () => {
                         />
                     </View>
                 </View>
-                <TouchableOpacity style={HomeStyle.filterIcon}>
+
+                {/* Butona tıklanınca modal açılacak */}
+                <TouchableOpacity
+                    style={HomeStyle.filterIcon}
+                    onPress={() => setModalVisible(true)}
+                >
                     <Image source={require('../../assets/icons/filter.png')} style={HomeStyle.icon} />
                 </TouchableOpacity>
             </View>
 
-
+            {/* Filter Modal */}
+            <FilterModal isVisible={isModalVisible} onClose={() => setModalVisible(false)} />
         </View>
-    )
+    );
 }
 
-export default Discover
+export default Discover;

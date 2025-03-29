@@ -3,12 +3,13 @@ import React from 'react';
 
 import ProfileStyle from '../../styles/profileStyle';
 import { useTheme } from '../../context/themeContext';
+import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
 
 const About = () => {
     const { theme } = useTheme(); // Temayı al
 
     return (
-        <View style={[ProfileStyle.aboutSection, theme === 'dark' && ProfileStyle.darkMode]}>
+        <View style={[ProfileStyle.aboutSection, theme === 'dark' && defaultScreenStyle.darkMode]}>
             <View>
                 <Text style={[ProfileStyle.profileTitle, theme === 'dark' && ProfileStyle.darkText]}>About</Text>
             </View>

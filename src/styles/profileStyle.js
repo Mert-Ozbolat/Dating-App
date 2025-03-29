@@ -31,16 +31,6 @@ const ProfileStyle = StyleSheet.create({
         height: 30,
         resizeMode: 'cover',
     },
-
-    //* Dark Mode
-    darkMode: {
-        backgroundColor: Colors.darkGray,
-    },
-    darkText: {
-        color: Colors.lightGray,
-    },
-
-
     profileTitle: {
         fontSize: 24,
         fontWeight: '700',

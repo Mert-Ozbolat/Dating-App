@@ -16,13 +16,9 @@ const HomeScreen = () => {
                 <View>
                     <Header />
                 </View>
-
-
                 <View>
                     <Discover />
                 </View>
-
-
                 <View>
                     <Card />
                 </View>

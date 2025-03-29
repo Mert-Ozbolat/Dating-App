@@ -2,12 +2,13 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { useTheme } from '../../context/themeContext';
 import ProfileStyle from '../../styles/profileStyle';
+import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
 
 const Profile = () => {
     const { theme, toggleTheme } = useTheme(); // Temayı ve değiştirme fonksiyonunu al
 
     return (
-        <View style={[ProfileStyle.profileSection, theme === 'dark' && ProfileStyle.darkMode]}>
+        <View style={[ProfileStyle.profileSection, theme === 'dark' && defaultScreenStyle.darkMode]}>
             <View style={ProfileStyle.theme}>
                 <TouchableOpacity style={ProfileStyle.themeBtn} onPress={toggleTheme}>
                     <Image

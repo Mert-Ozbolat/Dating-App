@@ -5,10 +5,13 @@ import MessagesScreen from "../screens/messages";
 import ProfileScreen from "../screens/profile";
 import TabIcon from "../components/router/tabIcon";
 import { Colors } from "../theme/colors";
+import { useTheme } from "../context/themeContext";
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigatior = () => {
+
+    const { theme } = useTheme()
 
     return (
         <Tab.Navigator
@@ -51,9 +54,17 @@ const TabNavigatior = () => {
                 name={TABNAVIGATION.MESSAGES} component={MessagesScreen} />
             <Tab.Screen
                 options={{
-                    headerShown: true
+                    headerShown: true,
+                    headerStyle: {
+                        backgroundColor: theme === 'dark' ? Colors.darkGray : Colors.lightGray,
+                    },
+                    headerTitleStyle: {
+                        color: theme === 'dark' ? Colors.lightGray : Colors.darkGray,
+                    }
                 }}
-                name={TABNAVIGATION.PROFILE} component={ProfileScreen} />
+                name={TABNAVIGATION.PROFILE}
+                component={ProfileScreen}
+            />
         </Tab.Navigator>
     )
 }
