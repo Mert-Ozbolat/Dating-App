@@ -6,12 +6,12 @@ import { useTheme } from '../../context/themeContext';
 import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
 
 const About = () => {
-    const { theme } = useTheme(); // Temayı al
+    const { theme } = useTheme();
 
     return (
         <View style={[ProfileStyle.aboutSection, theme === 'dark' && defaultScreenStyle.darkMode]}>
             <View>
-                <Text style={[ProfileStyle.profileTitle, theme === 'dark' && ProfileStyle.darkText]}>About</Text>
+                <Text style={[ProfileStyle.profileTitle, theme === 'dark' && defaultScreenStyle.darkText]}>About</Text>
             </View>
 
             {/* Personal Info */}

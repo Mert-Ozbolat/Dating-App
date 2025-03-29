@@ -20,7 +20,8 @@ const MessagesStyle = StyleSheet.create({
 
     search: {
         position: 'relative',
-        paddingHorizontal: width * 0.05
+        paddingHorizontal: width * 0.05,
+        marginVertical: 30,
     },
     searchIcon: {
         position: 'absolute',
@@ -31,9 +32,6 @@ const MessagesStyle = StyleSheet.create({
     },
 
     // Actives
-    activeUsers: {
-        marginTop: height * 0.02
-    },
     activeTitle: {
         marginHorizontal: width * 0.025,
         marginBottom: height * 0.012,
@@ -77,7 +75,7 @@ const MessagesStyle = StyleSheet.create({
         color: Colors.darkGray,
         marginTop: height * 0.008,
         fontSize: width * 0.04,
-        fontWeight: 'bold',
+        fontWeight: 'regular',
         textAlign: 'center'
     },
 

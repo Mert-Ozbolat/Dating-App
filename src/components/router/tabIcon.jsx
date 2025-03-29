@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Image } from 'react-native';
 import { TABNAVIGATION } from '../../utils/routes';
+import { height, width } from '../../utils/constants';
 
 
 const TabIcon = ({ route, size, color, focused }) => {

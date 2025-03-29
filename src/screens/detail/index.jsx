@@ -3,6 +3,7 @@ import React from 'react';
 import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
 import DetailStyle from '../../styles/detailStyle';
 import { useNavigation } from '@react-navigation/native';
+import ActionButtons from '../../components/ui/actionButtons';
 
 const Detail = ({ route }) => {
     const { card } = route.params || {};
@@ -34,19 +35,16 @@ const Detail = ({ route }) => {
 
                 <View style={DetailStyle.contentWrapper}>
                     <View style={DetailStyle.btnWrapper}>
-                        <Text>Button1</Text>
-                        <Text>Button2</Text>
-                        <Text>Button3</Text>
+                        <ActionButtons />
                     </View>
 
                     <View style={DetailStyle.infoWrapper}>
-                        {/* Ad - Meslek */}
                         <View style={DetailStyle.nameContainer}>
                             <Text style={DetailStyle.nameText}>{card.name}, {card.age}</Text>
                             <Text style={DetailStyle.jobText}>Graphic Designer 🎨💻</Text>
                         </View>
 
-                        {/* Konum */}
+
                         <View style={DetailStyle.locationContainer}>
                             <View>
                                 <Text style={DetailStyle.title}>Location</Text>
@@ -58,7 +56,7 @@ const Detail = ({ route }) => {
                             </View>
                         </View>
 
-                        {/* Bio */}
+
                         <View style={DetailStyle.bioContainer}>
                             <Text style={DetailStyle.title}>Bio</Text>
                             <Text style={DetailStyle.text}>
@@ -69,7 +67,7 @@ const Detail = ({ route }) => {
                         </View>
                     </View>
 
-                    {/* Hobiler Grid Düzeni */}
+
                     <View style={DetailStyle.hobbiesWrapper}>
                         <Text style={DetailStyle.hobbiesTitle}>Hobbies</Text>
                         <View style={DetailStyle.hobbiesGrid}>

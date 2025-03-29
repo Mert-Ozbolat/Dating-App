@@ -1,13 +1,14 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-deck-swiper';
 import HomeStyle from '../../styles/homeStyle';
 import { useNavigation } from '@react-navigation/native';
 import { TABNAVIGATION } from '../../utils/routes';
+import LottieView from 'lottie-react-native';  // Lottie'yi içe aktarın
+import ActionButtons from '../ui/actionButtons';
 
 const Card = () => {
     const navigation = useNavigation();
-
     const [cards, setCards] = useState([
         { id: '1', name: 'Amelia Richardson', age: 25, image: require('../../assets/users/women4.jpeg') },
         { id: '2', name: 'Emily', age: 23, image: require('../../assets/users/men6.jpeg') },
@@ -17,6 +18,8 @@ const Card = () => {
     const handleCardPress = useCallback((card) => {
         navigation.navigate(TABNAVIGATION.DETAIL, { card });
     }, [navigation]);
+
+
 
     return (
         <View style={{ flex: 1 }}>
@@ -39,18 +42,7 @@ const Card = () => {
                                             </View>
                                         </View>
 
-                                        {/* Butonlar */}
-                                        <View style={HomeStyle.actionsContainer}>
-                                            <TouchableOpacity style={HomeStyle.cancel}>
-                                                <Image style={HomeStyle.icon} source={require('../../assets/icons/cancel.png')} />
-                                            </TouchableOpacity>
-                                            <TouchableOpacity style={HomeStyle.match}>
-                                                <Image style={HomeStyle.matchIcon} source={require('../../assets/icons/heart-fill.png')} />
-                                            </TouchableOpacity>
-                                            <TouchableOpacity style={HomeStyle.star}>
-                                                <Image style={HomeStyle.icon} source={require('../../assets/icons/star.png')} />
-                                            </TouchableOpacity>
-                                        </View>
+                                        <ActionButtons />
                                     </View>
                                 </View>
                             </View>

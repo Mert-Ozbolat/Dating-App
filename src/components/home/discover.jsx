@@ -23,7 +23,6 @@ const Discover = () => {
                     </View>
                 </View>
 
-                {/* Butona tıklanınca modal açılacak */}
                 <TouchableOpacity
                     style={HomeStyle.filterIcon}
                     onPress={() => setModalVisible(true)}
@@ -32,7 +31,6 @@ const Discover = () => {
                 </TouchableOpacity>
             </View>
 
-            {/* Filter Modal */}
             <FilterModal isVisible={isModalVisible} onClose={() => setModalVisible(false)} />
         </View>
     );

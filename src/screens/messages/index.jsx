@@ -6,6 +6,7 @@ import Messages from '../../components/messages/messages'
 import ActiveUsers from '../../components/messages/activeUsers'
 import Input from '../../components/ui/textInput'
 import { Colors } from '../../theme/colors'
+import { useTheme } from '../../context/themeContext'
 
 
 
@@ -42,18 +43,22 @@ const users = [
 
 
 const MessagesScreen = () => {
+
+    const { theme, toggleTheme } = useTheme();
+
     return (
-        <SafeAreaView style={defaultScreenStyle.container}>
+        <SafeAreaView style={[defaultScreenStyle.container, theme === 'dark' && defaultScreenStyle.darkMode]}>
             <ScrollView
                 showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ paddingBottom: 20 }}
             >
+
                 <View style={MessagesStyle.search}>
                     <Input
                         placeholder={'Search'}
                         color={Colors.darkGray}
                         backgroundColor={Colors.mediumGray}
                     />
-                    <Image source={require('../../assets/icons/search.png')} style={MessagesStyle.searchIcon} />
                 </View>
 
                 <View style={MessagesStyle.activeUsers}>
@@ -62,8 +67,9 @@ const MessagesScreen = () => {
                         data={users}
                         horizontal
                         showsHorizontalScrollIndicator={false}
-                        keyExtractor={item => item.id}
+                        keyExtractor={(item) => item.id}
                         renderItem={({ item }) => <ActiveUsers item={item} />}
+                        removeClippedSubviews={false}
                     />
                 </View>
 
@@ -71,11 +77,12 @@ const MessagesScreen = () => {
                     <Text style={MessagesStyle.messagesTitle}>Messages</Text>
                     <FlatList
                         data={messages}
-                        keyExtractor={item => item.id}
+                        scrollEnabled={false}
+                        keyExtractor={(item) => item.id}
                         renderItem={({ item }) => <Messages item={item} />}
+                        removeClippedSubviews={false}
                     />
                 </View>
-
             </ScrollView>
         </SafeAreaView>
     )

@@ -1,16 +1,19 @@
 import React from 'react';
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import MessagesStyle from '../../styles/messagesStyle';
+import { defaultScreenStyle } from '../../styles/defaultScreenStyle';
+import { useTheme } from '../../context/themeContext';
 
 const Messages = ({ item }) => {
+    const { theme, toggleTheme } = useTheme();
     return (
         <View style={MessagesStyle.messages}>
             <View style={MessagesStyle.messageContainer}>
                 <View style={MessagesStyle.messageInfo}>
                     <Image source={item.image} style={MessagesStyle.profileImage} />
                     <View>
-                        <Text style={MessagesStyle.name}>{item.name}</Text>
-                        <Text style={MessagesStyle.message}>{item.text}</Text>
+                        <Text style={[MessagesStyle.name, theme === 'dark' && defaultScreenStyle.darkText]}>{item.name}</Text>
+                        <Text style={[MessagesStyle.message, theme === 'dark' && defaultScreenStyle.darkText]}>{item.text}</Text>
                     </View>
                 </View>
                 {item.unread > 0 && (
@@ -23,8 +26,5 @@ const Messages = ({ item }) => {
     );
 };
 
-const styles = StyleSheet.create({
-
-});
 
 export default Messages;

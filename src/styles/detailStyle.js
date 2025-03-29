@@ -8,17 +8,17 @@ const DetailStyle = StyleSheet.create({
     },
     goBackIcon: {
         position: 'absolute',
-        width: 36,
-        height: 36,
+        width: width * 0.09,
+        height: width * 0.09,
         backgroundColor: Colors.lightGray,
         borderRadius: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        left: 20,
-        top: 20,
+        left: width * 0.05,
+        top: height * 0.03,
     },
     profileImg: {
-        height: 440,
+        height: height * 0.55,
         width: '100%',
         resizeMode: 'cover',
         zIndex: -1,
@@ -27,52 +27,48 @@ const DetailStyle = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: Colors.primaryPink,
         height: '100%',
-        borderTopRightRadius: 30,
-        borderTopLeftRadius: 30,
-        marginTop: -50,
-        padding: 20
+        borderTopRightRadius: width * 0.08,
+        borderTopLeftRadius: width * 0.08,
+        marginTop: -height * 0.06,
+        padding: width * 0.05,
     },
     btnWrapper: {
         flexDirection: 'row',
         backgroundColor: Colors.darkGray,
-        borderRadius: 30,
+        borderRadius: width * 0.08,
         justifyContent: 'space-around',
-        width: 360,
-        height: 70,
+        width: width * 0.9,
+        height: height * 0.09,
         alignItems: 'center',
-        opacity: 0.9
-
+        opacity: 0.9,
     },
-
-
     infoWrapper: {
         backgroundColor: Colors.lightGray,
-        marginTop: 16,
-        padding: 10,
-        borderRadius: 20,
-        width: 360
+        marginTop: height * 0.02,
+        padding: width * 0.03,
+        borderRadius: width * 0.05,
+        width: width * 0.9,
     },
-
     nameText: {
         color: Colors.darkGray,
-        fontSize: 20,
-        fontWeight: 'medium',
+        fontSize: width * 0.05,
+        fontWeight: '600',
     },
     jobText: {
         color: Colors.primaryGreen,
-        fontSize: 16,
-        fontWeight: 'regular'
+        fontSize: width * 0.04,
+        fontWeight: '400',
     },
     locationContainer: {
         flexDirection: 'row',
-        marginTop: 10,
+        marginTop: height * 0.015,
         justifyContent: 'space-between',
     },
     locationIconWrapper: {
-        padding: 5,
-        borderRadius: 10,
-        minHeight: 35,
-        minWidth: 65,
+        padding: width * 0.015,
+        borderRadius: width * 0.03,
+        minHeight: height * 0.05,
+        minWidth: width * 0.2,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -80,41 +76,37 @@ const DetailStyle = StyleSheet.create({
     },
     distanceText: {
         color: Colors.primaryPink,
-        fontSize: 12,
-        fontWeight: 'regular'
+        fontSize: width * 0.03,
+        fontWeight: '400',
     },
-
     title: {
-        fontSize: 16,
-        fontWeight: 'medium',
+        fontSize: width * 0.04,
+        fontWeight: '600',
         color: Colors.darkGray,
-        marginBottom: 2
+        marginBottom: height * 0.005,
     },
     text: {
-        fontSize: 12,
-        fontWeight: 'regular',
+        fontSize: width * 0.03,
+        fontWeight: '400',
         color: Colors.darkGray,
-        marginBottom: 2
+        marginBottom: height * 0.005,
     },
     locationIcon: {
-        width: 20,
-        height: 20,
+        width: width * 0.05,
+        height: width * 0.05,
         resizeMode: 'cover',
         opacity: 1,
     },
-
     bioContainer: {
         flexDirection: 'column',
-        marginTop: 10,
+        marginTop: height * 0.015,
     },
-
-
     hobbiesWrapper: {
         backgroundColor: Colors.lightGray,
-        marginTop: 16,
-        padding: 10,
-        borderRadius: 20,
-        width: 360
+        marginTop: height * 0.02,
+        padding: width * 0.03,
+        borderRadius: width * 0.05,
+        width: width * 0.9,
     },
     hobbiesTitle: {
         textAlign: 'center',
@@ -123,19 +115,18 @@ const DetailStyle = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        gap: 20,
+        gap: width * 0.05,
     },
     hobbyItem: {
         backgroundColor: Colors.primaryPink,
-        padding: 5,
-        borderRadius: 30,
-
+        padding: width * 0.015,
+        borderRadius: width * 0.08,
     },
     hobbyText: {
         color: Colors.lightGray,
-        fontSize: 12,
-        fontWeight: 'Regular'
-    }
+        fontSize: width * 0.03,
+        fontWeight: '400',
+    },
 });
 
 export default DetailStyle;
